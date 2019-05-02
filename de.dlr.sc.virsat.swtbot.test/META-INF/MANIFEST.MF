@@ -6,6 +6,8 @@ Bundle-Version: 4.9.0.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-Vendor: DLR (German Aerospace Center)
 Require-Bundle: org.eclipse.swt,
+ org.eclipse.e4.core.services,
+ org.eclipse.osgi.services,
  org.eclipse.equinox.event,
  org.junit,
  org.eclipse.swtbot.go,
