@@ -18,6 +18,6 @@ Export-Package: de.dlr.sc.virsat.model.extension.maturity,
  de.dlr.sc.virsat.model.extension.maturity.model,
  de.dlr.sc.virsat.model.extension.maturity.util,
  de.dlr.sc.virsat.model.extension.maturity.validator,
- de.dlr.sc.virsat.model.extension.maturity.validatorde.dlr.sc.virsat.model.extension.maturity.migrator
+ de.dlr.sc.virsat.model.extension.maturity.validator
 Bundle-Activator: de.dlr.sc.virsat.model.extension.maturity.Activator
 Automatic-Module-Name: de.dlr.sc.virsat.model.extension.maturity

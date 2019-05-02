@@ -32,7 +32,7 @@ Export-Package: de.dlr.sc.virsat.model.extension.visualisation.propertyTester,
  de.dlr.sc.virsat.model.extension.visualisation.ui.perspective,
  de.dlr.sc.virsat.model.extension.visualisation.ui.snippet,
  de.dlr.sc.virsat.model.extension.visualisation.ui.visValidators,
- de.dlr.sc.virsat.model.extension.visualisation.ui.vtkClientde.dlr.sc.virsat.model.extension.visualisation.propertyTester
+ de.dlr.sc.virsat.model.extension.visualisation.ui.vtkClient
 Bundle-Vendor: DLR (German Aerospace Center)
 Bundle-Activator: de.dlr.sc.virsat.model.extension.visualisation.ui.Activator
 Import-Package: vtk

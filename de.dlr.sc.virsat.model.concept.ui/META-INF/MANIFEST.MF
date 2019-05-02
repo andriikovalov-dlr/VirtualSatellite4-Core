@@ -32,6 +32,6 @@ Export-Package: de.dlr.sc.virsat.model.concept.ui,
  de.dlr.sc.virsat.model.concept.ui.outline,
  de.dlr.sc.virsat.model.concept.ui.propertyTester,
  de.dlr.sc.virsat.model.concept.ui.quickfix,
- de.dlr.sc.virsat.model.concept.ui.wizardde.dlr.sc.virsat.model.concept.ui
+ de.dlr.sc.virsat.model.concept.ui.wizard
 Bundle-Activator: de.dlr.sc.virsat.model.concept.ui.internal.ConceptActivator
 Automatic-Module-Name: de.dlr.sc.virsat.model.concept.ui

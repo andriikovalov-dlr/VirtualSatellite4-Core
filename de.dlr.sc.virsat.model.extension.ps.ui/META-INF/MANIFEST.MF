@@ -22,5 +22,5 @@ Export-Package: de.dlr.sc.virsat.model.extension.ps.propertyTester,
  de.dlr.sc.virsat.model.extension.ps.ui.command,
  de.dlr.sc.virsat.model.extension.ps.ui.handler,
  de.dlr.sc.virsat.model.extension.ps.ui.snippet,
- de.dlr.sc.virsat.model.extension.ps.ui.wizardsde.dlr.sc.virsat.model.extension.ps.propertyTester
+ de.dlr.sc.virsat.model.extension.ps.ui.wizards
 

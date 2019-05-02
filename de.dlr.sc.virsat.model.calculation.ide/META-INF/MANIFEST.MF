@@ -12,6 +12,6 @@ Bundle-Vendor: DLR (German Aerospace Center)
 Bundle-ActivationPolicy: lazy
 Export-Package: de.dlr.sc.virsat.model.calculation.ide.contentassist.antlr,
  de.dlr.sc.virsat.model.calculation.ide.contentassist.antlr.internal,
- de.dlr.sc.virsat.model.calculation.idede.dlr.sc.virsat.model.calculation.ide
+ de.dlr.sc.virsat.model.calculation.ide
 Automatic-Module-Name: de.dlr.sc.virsat.model.calculation.ide
 

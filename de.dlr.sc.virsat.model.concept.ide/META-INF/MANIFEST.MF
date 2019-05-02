@@ -10,7 +10,7 @@ Require-Bundle: de.dlr.sc.virsat.model.concept,
  org.antlr.runtime
 Export-Package: de.dlr.sc.virsat.model.concept.ide.contentassist.antlr,
  de.dlr.sc.virsat.model.concept.ide.contentassist.antlr.internal,
- de.dlr.sc.virsat.model.concept.idede.dlr.sc.virsat.model.concept.ide
+ de.dlr.sc.virsat.model.concept.ide
 Bundle-Vendor: DLR (German Aerospace Center)
 Bundle-ActivationPolicy: lazy
 Automatic-Module-Name: de.dlr.sc.virsat.model.concept.ide

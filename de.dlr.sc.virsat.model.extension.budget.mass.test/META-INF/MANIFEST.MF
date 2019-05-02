@@ -17,5 +17,5 @@ Require-Bundle: org.junit,
 Export-Package: de.dlr.sc.virsat.model.extension.budget.mass.migrator,
  de.dlr.sc.virsat.model.extension.budget.mass.model,
  de.dlr.sc.virsat.model.extension.budget.mass.test,
- de.dlr.sc.virsat.model.extension.budget.mass.utilde.dlr.sc.virsat.model.extension.budget.mass.migrator
+ de.dlr.sc.virsat.model.extension.budget.mass.util
 Automatic-Module-Name: de.dlr.sc.virsat.model.extension.budget.mass.test

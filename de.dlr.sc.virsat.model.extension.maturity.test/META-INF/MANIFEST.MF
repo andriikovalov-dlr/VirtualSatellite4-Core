@@ -17,5 +17,5 @@ Require-Bundle: org.junit,
 Export-Package: de.dlr.sc.virsat.model.extension.maturity.migrator,
  de.dlr.sc.virsat.model.extension.maturity.model,
  de.dlr.sc.virsat.model.extension.maturity.test,
- de.dlr.sc.virsat.model.extension.maturity.utilde.dlr.sc.virsat.model.extension.maturity.migrator
+ de.dlr.sc.virsat.model.extension.maturity.util
 Automatic-Module-Name: de.dlr.sc.virsat.model.extension.maturity.test
