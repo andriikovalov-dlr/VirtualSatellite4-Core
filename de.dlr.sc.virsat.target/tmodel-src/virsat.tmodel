@@ -15,7 +15,7 @@
 		Unit org.antlr.runtime version 4.3.0.v201502022030; 
 	}
 	
-	RepositoryLocation Eclipse url "https://download.eclipse.org/releases/" + eclipseVersion + "/"{
+	RepositoryLocation EclipseSimultaneousRelease url "https://download.eclipse.org/releases/" + eclipseVersion + "/"{
 		Unit org.eclipse.emf.compare.ide.ui.feature.group version 3.3.6.201903050300;
 		Unit org.eclipse.emf.edapt.runtime.feature.feature.group version 1.3.1.201812130816;
 		Unit org.eclipse.emf.sdk.feature.group version 2.17.0.v20190301-1325;
