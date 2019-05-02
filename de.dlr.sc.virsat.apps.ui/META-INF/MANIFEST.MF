@@ -20,5 +20,8 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Eclipse-ExtensibleAPI: true
 Export-Package: de.dlr.sc.virsat.apps.ui,
- de.dlr.sc.virsat.apps.ui.handler
+ de.dlr.sc.virsat.apps.ui.editor.snippet,
+ de.dlr.sc.virsat.apps.ui.handler,
+ de.dlr.sc.virsat.apps.ui.navigator.content,
+ de.dlr.sc.virsat.apps.ui.startup
 Automatic-Module-Name: de.dlr.sc.virsat.apps.ui

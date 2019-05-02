@@ -14,5 +14,8 @@ Require-Bundle: org.junit,
  de.dlr.sc.virsat.model,
  de.dlr.sc.virsat.model.edit,
  de.dlr.sc.virsat.concept.unittest.util
-Export-Package: de.dlr.sc.virsat.model.extension.ps.test
+Export-Package: de.dlr.sc.virsat.model.extension.ps.migrator,
+ de.dlr.sc.virsat.model.extension.ps.model,
+ de.dlr.sc.virsat.model.extension.ps.test,
+ de.dlr.sc.virsat.model.extension.ps.util.testde.dlr.sc.virsat.model.extension.ps.migrator
 Automatic-Module-Name: de.dlr.sc.virsat.model.extension.ps.test

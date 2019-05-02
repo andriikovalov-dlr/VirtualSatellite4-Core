@@ -8,7 +8,8 @@ Bundle-Vendor: DLR (German Aerospace Center)
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Eclipse-ExtensibleAPI: true
-Export-Package: de.dlr.sc.virsat.apps.api.external;uses:="de.dlr.sc.virsat.model.DVLM.Units,de.dlr.sc.virsat.model.DVLM",
+Export-Package: de.dlr.sc.virsat.apps,
+ de.dlr.sc.virsat.apps.api.external;uses:="de.dlr.sc.virsat.model.DVLM.Units,de.dlr.sc.virsat.model.DVLM",
  de.dlr.sc.virsat.apps.initializer;x-friends:="de.dlr.sc.virsat.apps.ui"
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources,

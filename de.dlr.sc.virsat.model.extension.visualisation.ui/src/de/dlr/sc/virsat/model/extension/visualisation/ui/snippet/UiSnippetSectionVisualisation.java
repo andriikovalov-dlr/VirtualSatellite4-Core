@@ -163,6 +163,7 @@ public class UiSnippetSectionVisualisation extends AUiSnippetSectionVisualisatio
 
 
 	@Override
+	@SuppressWarnings("unchecked")
 	public void setDataBinding(DataBindingContext dbCtx, EditingDomain editingDomain, EObject model) {
 
 		super.setDataBinding(dbCtx, editingDomain, model); 
@@ -175,7 +176,6 @@ public class UiSnippetSectionVisualisation extends AUiSnippetSectionVisualisatio
 			
 			Widget visualisationWidget = mapPropertyToVisualisationWidget.get(propertyFqn); 
 			if (visualisationWidget != null) {
-				@SuppressWarnings("unchecked")
 				IValueProperty<EObject, ?> vpiValueProperty = EMFEditProperties.value(editingDomain, PropertyinstancesPackage.Literals.VALUE_PROPERTY_INSTANCE__VALUE);
 				if (visualisationWidget instanceof CCombo) {
 					dbCtx.bindValue(WidgetProperties.selection().observe(visualisationWidget), vpiValueProperty.observe(propertyInstance));

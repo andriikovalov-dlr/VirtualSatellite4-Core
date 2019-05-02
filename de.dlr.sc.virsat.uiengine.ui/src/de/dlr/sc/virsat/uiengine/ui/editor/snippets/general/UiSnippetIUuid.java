@@ -84,6 +84,7 @@ public class UiSnippetIUuid extends AUiEStructuralFeatureSectionSnippet implemen
 	}
 
 	@Override
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public void setDataBinding(DataBindingContext dbCtx, EditingDomain editingDomain, EObject model) {
 		super.setDataBinding(dbCtx, editingDomain, model);
 		
@@ -107,7 +108,6 @@ public class UiSnippetIUuid extends AUiEStructuralFeatureSectionSnippet implemen
 		};
 
 		if (textUuid != null) {
-			@SuppressWarnings("unchecked")
 			IValueProperty<EObject, ?> iUuidProperty = EMFEditProperties.value(editingDomain, GeneralPackage.eINSTANCE.getIUuid_Uuid());
 			
 			dbCtx.bindValue(WidgetProperties.text(SWT.Modify).observe(textUuid), iUuidProperty.observe(model),

@@ -212,7 +212,8 @@ Bundle-NativeCode: native_lib/vtk/vtkalglib-8.1.dll;
 Eclipse-PlatformFilter: (&  (osgi.os=win32) (osgi.arch=x86_64) )
 Bundle-ClassPath: .,
  native_lib/vtk/vtk.jar
-Export-Package: vtk,
+Export-Package: de.dlr.sc.virsat.external.lib.vtk.win32.x86_64,
+ vtk,
  vtk.rendering,
  vtk.rendering.awt
 Require-Bundle: de.dlr.sc.virsat.external.lib

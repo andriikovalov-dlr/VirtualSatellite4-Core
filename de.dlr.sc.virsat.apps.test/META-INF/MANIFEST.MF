@@ -7,5 +7,7 @@ Fragment-Host: de.dlr.sc.virsat.apps
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-Vendor: DLR (German Aerospace Center)
 Require-Bundle: org.junit
-Export-Package: de.dlr.sc.virsat.apps.test
+Export-Package: de.dlr.sc.virsat.apps.initializer,
+ de.dlr.sc.virsat.apps.test,
+ de.dlr.sc.virsat.apps.test.util
 Automatic-Module-Name: de.dlr.sc.virsat.apps.test

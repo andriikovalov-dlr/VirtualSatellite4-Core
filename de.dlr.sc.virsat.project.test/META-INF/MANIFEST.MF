@@ -8,5 +8,14 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-Vendor: DLR (German Aerospace Center)
 Require-Bundle: org.junit,
  org.eclipse.emf.ecore
-Export-Package: de.dlr.sc.virsat.project.test
+Export-Package: de.dlr.sc.virsat.project.editingDomain,
+ de.dlr.sc.virsat.project.editingDomain.commands,
+ de.dlr.sc.virsat.project.markers,
+ de.dlr.sc.virsat.project.resources,
+ de.dlr.sc.virsat.project.resources.command,
+ de.dlr.sc.virsat.project.structure,
+ de.dlr.sc.virsat.project.structure.command,
+ de.dlr.sc.virsat.project.structure.nature,
+ de.dlr.sc.virsat.project.test,
+ de.dlr.sc.virsat.project.testAPI
 Automatic-Module-Name: de.dlr.sc.virsat.project.test

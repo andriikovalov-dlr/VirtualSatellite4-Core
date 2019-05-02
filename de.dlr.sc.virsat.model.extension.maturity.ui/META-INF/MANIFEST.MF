@@ -17,3 +17,8 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: DLR (German Aerospace Center)
 Automatic-Module-Name: de.dlr.sc.virsat.model.extension.maturity.ui
+Export-Package: de.dlr.sc.virsat.model.extension.maturity.propertyTester,
+ de.dlr.sc.virsat.model.extension.maturity.ui.command,
+ de.dlr.sc.virsat.model.extension.maturity.ui.handler,
+ de.dlr.sc.virsat.model.extension.maturity.ui.snippet,
+ de.dlr.sc.virsat.model.extension.maturity.ui.snippetde.dlr.sc.virsat.model.extension.maturity.propertyTester

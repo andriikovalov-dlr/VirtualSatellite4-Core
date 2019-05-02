@@ -18,7 +18,7 @@ Require-Bundle: de.dlr.sc.virsat.model,
  org.eclipse.xtext.xbase.lib,
  org.eclipse.xtext.common.types,
  org.antlr.runtime,
- org.objectweb.asm;bundle-version="[5.0.1,6.0.0)";resolution:=optional,
+ org.objectweb.asm,
  org.eclipse.xtext.xbase,
  org.eclipse.xtend.lib,
  de.dlr.sc.virsat.build
@@ -36,7 +36,8 @@ Export-Package: de.dlr.sc.virsat.model.calculation,
  de.dlr.sc.virsat.model.calculation.scoping,
  de.dlr.sc.virsat.model.calculation.serializer,
  de.dlr.sc.virsat.model.calculation.services,
- de.dlr.sc.virsat.model.calculation.validation
+ de.dlr.sc.virsat.model.calculation.validation,
+ de.dlr.sc.virsat.model.calculation.validator
 Bundle-Activator: de.dlr.sc.virsat.model.calculation.Activator
 Import-Package: org.apache.log4j
 Automatic-Module-Name: de.dlr.sc.virsat.model.calculation

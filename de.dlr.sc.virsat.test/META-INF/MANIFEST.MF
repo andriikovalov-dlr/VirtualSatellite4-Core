@@ -41,5 +41,6 @@ Import-Package: de.dlr.sc.virsat.apps.test,
  de.dlr.sc.virsat.model.test,
  de.dlr.sc.virsat.project.test,
  de.dlr.sc.virsat.svn.test
-Export-Package: de.dlr.sc.virsat.test
+Export-Package: de.dlr.sc.virsat.plugin,
+ de.dlr.sc.virsat.test
 Automatic-Module-Name: de.dlr.sc.virsat.test

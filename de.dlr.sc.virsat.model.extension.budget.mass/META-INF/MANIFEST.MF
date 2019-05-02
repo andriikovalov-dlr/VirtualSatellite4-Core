@@ -14,6 +14,7 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Eclipse-ExtensibleAPI: true
 Export-Package: de.dlr.sc.virsat.model.extension.budget.mass,
+ de.dlr.sc.virsat.model.extension.budget.mass.migrator,
  de.dlr.sc.virsat.model.extension.budget.mass.model,
  de.dlr.sc.virsat.model.extension.budget.mass.util,
  de.dlr.sc.virsat.model.extension.budget.mass.validator

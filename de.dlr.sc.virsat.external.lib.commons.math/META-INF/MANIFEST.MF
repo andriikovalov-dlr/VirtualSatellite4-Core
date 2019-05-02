@@ -9,7 +9,9 @@ Require-Bundle: de.dlr.sc.virsat.external.lib
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Eclipse-ExtensibleAPI: true
-Export-Package: de.dlr.sc.virsat.external.lib.commons.math;uses:="org.osgi.framework,org.eclipse.core.runtime",
+Export-Package: assets.org.apache.commons.math3.exception.util,
+ assets.org.apache.commons.math3.random,
+ de.dlr.sc.virsat.external.lib.commons.math;uses:="org.osgi.framework,org.eclipse.core.runtime",
  org.apache.commons.math3,
  org.apache.commons.math3.analysis,
  org.apache.commons.math3.analysis.differentiation,

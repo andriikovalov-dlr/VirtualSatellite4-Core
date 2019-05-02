@@ -104,10 +104,10 @@ public class UiSnippetIName extends AUiEStructuralFeatureSectionSnippet implemen
 	}
 	
 	@Override
+	@SuppressWarnings({ "unchecked" })
 	public void setDataBinding(DataBindingContext dbCtx, EditingDomain editingDomain, EObject model) {
 		super.setDataBinding(dbCtx, editingDomain, model);
 		if (textName != null) {
-			@SuppressWarnings("unchecked")
 			IValueProperty<EObject, ?> nameProperty = EMFEditProperties.value(editingDomain, GeneralPackage.Literals.INAME__NAME);
 			dbCtx.bindValue(WidgetProperties.text(SWT.Modify).observe(textName), nameProperty.observe(model));
 		}

@@ -19,3 +19,8 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: DLR (German Aerospace Center)
 Automatic-Module-Name: de.dlr.sc.virsat.model.extension.budget.mass.ui
+Export-Package: de.dlr.sc.virsat.model.extension.budget.mass.propertyTester,
+ de.dlr.sc.virsat.model.extension.budget.mass.ui.command,
+ de.dlr.sc.virsat.model.extension.budget.mass.ui.handler,
+ de.dlr.sc.virsat.model.extension.budget.mass.ui.snippet,
+ de.dlr.sc.virsat.model.extension.budget.mass.ui.snippet.chart.providerde.dlr.sc.virsat.model.extension.budget.mass.propertyTester

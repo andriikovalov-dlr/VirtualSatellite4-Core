@@ -7,5 +7,9 @@ Fragment-Host: de.dlr.sc.virsat.build
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-Vendor: DLR (German Aerospace Center)
 Require-Bundle: org.junit
-Export-Package: de.dlr.sc.virsat.build.test
+Export-Package: de.dlr.sc.virsat.build.inheritance,
+ de.dlr.sc.virsat.build.marker.util,
+ de.dlr.sc.virsat.build.test,
+ de.dlr.sc.virsat.build.validator,
+ de.dlr.sc.virsat.build.validator.core
 Automatic-Module-Name: de.dlr.sc.virsat.build.test

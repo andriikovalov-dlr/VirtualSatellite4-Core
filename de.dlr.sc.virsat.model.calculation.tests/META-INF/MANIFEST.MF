@@ -9,5 +9,10 @@ Bundle-Vendor: DLR (German Aerospace Center)
 Require-Bundle: org.eclipse.core.runtime,
  org.junit,
  de.dlr.sc.virsat.model
-Export-Package: de.dlr.sc.virsat.model.calculation.test;uses:="junit.framework"
+Export-Package: de.dlr.sc.virsat.model.calculation.compute,
+ de.dlr.sc.virsat.model.calculation.marker,
+ de.dlr.sc.virsat.model.calculation.serializer,
+ de.dlr.sc.virsat.model.calculation.test;uses:="junit.framework",
+ de.dlr.sc.virsat.model.calculation.test.util,
+ de.dlr.sc.virsat.model.calculation.validator
 Automatic-Module-Name: de.dlr.sc.virsat.model.calculation.tests

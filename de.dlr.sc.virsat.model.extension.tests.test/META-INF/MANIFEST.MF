@@ -16,5 +16,13 @@ Require-Bundle: org.junit,
  de.dlr.sc.virsat.concept.unittest.util,
  de.dlr.sc.virsat.apps,
  de.dlr.sc.virsat.external.lib.spotbugs
-Export-Package: de.dlr.sc.virsat.model.extension.tests.test
+Export-Package: de.dlr.sc.virsat.apps.api.external,
+ de.dlr.sc.virsat.model.concept.list,
+ de.dlr.sc.virsat.model.concept.types.factory,
+ de.dlr.sc.virsat.model.concept.types.util,
+ de.dlr.sc.virsat.model.dvlm.structural.command,
+ de.dlr.sc.virsat.model.extension.tests.migrator,
+ de.dlr.sc.virsat.model.extension.tests.model,
+ de.dlr.sc.virsat.model.extension.tests.test,
+ de.dlr.sc.virsat.project.editingDomain.commandsde.dlr.sc.virsat.model.extension.tests.migrator
 Automatic-Module-Name: de.dlr.sc.virsat.model.extension.tests.test

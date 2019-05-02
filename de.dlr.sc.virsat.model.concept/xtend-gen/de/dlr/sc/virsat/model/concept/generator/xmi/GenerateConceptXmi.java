@@ -23,11 +23,11 @@ import org.eclipse.xtext.xbase.lib.Exceptions;
 
 @SuppressWarnings("all")
 public class GenerateConceptXmi {
-  public final static String MODEL_TYPE_XMI_EXTENSION = "xmi";
+  public static final String MODEL_TYPE_XMI_EXTENSION = "xmi";
   
-  public final static String CONCEPT_BASE_FILENAME = "concept";
+  public static final String CONCEPT_BASE_FILENAME = "concept";
   
-  public final static String CONCEPT_XMI_FILENAME = ((GenerateConceptXmi.CONCEPT_BASE_FILENAME + ".") + GenerateConceptXmi.MODEL_TYPE_XMI_EXTENSION);
+  public static final String CONCEPT_XMI_FILENAME = ((GenerateConceptXmi.CONCEPT_BASE_FILENAME + ".") + GenerateConceptXmi.MODEL_TYPE_XMI_EXTENSION);
   
   /**
    * This method serialized the data model into the given format

@@ -20,7 +20,19 @@ Require-Bundle: de.dlr.sc.virsat.model.extension.visualisation,
  de.dlr.sc.virsat.external.lib.protobuf
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
-Export-Package: de.dlr.sc.virsat.model.extension.visualisation.ui.calculations
+Export-Package: de.dlr.sc.virsat.model.extension.visualisation.propertyTester,
+ de.dlr.sc.virsat.model.extension.visualisation.ui,
+ de.dlr.sc.virsat.model.extension.visualisation.ui.calculations,
+ de.dlr.sc.virsat.model.extension.visualisation.ui.cellEditorSupport,
+ de.dlr.sc.virsat.model.extension.visualisation.ui.command,
+ de.dlr.sc.virsat.model.extension.visualisation.ui.contentProvider,
+ de.dlr.sc.virsat.model.extension.visualisation.ui.debugClient,
+ de.dlr.sc.virsat.model.extension.visualisation.ui.dialogs,
+ de.dlr.sc.virsat.model.extension.visualisation.ui.handler,
+ de.dlr.sc.virsat.model.extension.visualisation.ui.perspective,
+ de.dlr.sc.virsat.model.extension.visualisation.ui.snippet,
+ de.dlr.sc.virsat.model.extension.visualisation.ui.visValidators,
+ de.dlr.sc.virsat.model.extension.visualisation.ui.vtkClientde.dlr.sc.virsat.model.extension.visualisation.propertyTester
 Bundle-Vendor: DLR (German Aerospace Center)
 Bundle-Activator: de.dlr.sc.virsat.model.extension.visualisation.ui.Activator
 Import-Package: vtk

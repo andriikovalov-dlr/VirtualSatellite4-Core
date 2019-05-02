@@ -7,5 +7,6 @@ Fragment-Host: de.dlr.sc.virsat.commons
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-Vendor: DLR (German Aerospace Center)
 Require-Bundle: org.junit
-Export-Package: de.dlr.sc.virsat.commons.test
+Export-Package: de.dlr.sc.virsat.commons,
+ de.dlr.sc.virsat.commons.test
 Automatic-Module-Name: de.dlr.sc.virsat.commons.test

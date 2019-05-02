@@ -42,24 +42,24 @@ by German Aerospace Center (DLR e.V.)
    </requires>
 
    <plugin
-         id="org.eclipse.equinox.concurrent"
-         download-size="0"
-         install-size="0"
-         version="1.1.0.v20130327-1442"
-         unpack="false"/>
-
-   <plugin
          id="org.objectweb.asm"
          download-size="0"
          install-size="0"
-         version="5.2.0.v20170126-0011"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.draw2d"
          download-size="0"
          install-size="0"
-         version="3.10.100.201606061308"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.equinox.concurrent"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
          unpack="false"/>
 
 </feature>

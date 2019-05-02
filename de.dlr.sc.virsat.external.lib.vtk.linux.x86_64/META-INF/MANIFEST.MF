@@ -216,7 +216,8 @@ Bundle-ClassPath: native_lib/vtk/vtk.jar,
  .
 Export-Package: vtk,
  vtk.rendering,
- vtk.rendering.awt
+ vtk.rendering.awt,
+ vtk.sample
 Bundle-Activator: de.dlr.sc.virsat.external.lib.vtk.linux.x86_64.Activator
 Bundle-ActivationPolicy: lazy
 Require-Bundle: de.dlr.sc.virsat.external.lib

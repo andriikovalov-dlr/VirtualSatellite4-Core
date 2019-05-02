@@ -16,15 +16,15 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.function.Consumer;
 
-import org.eclipse.core.databinding.Binding;
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
+import org.eclipse.core.databinding.ValidationStatusProvider;
 import org.eclipse.core.databinding.conversion.Converter;
 import org.eclipse.core.databinding.conversion.IConverter;
 import org.eclipse.core.databinding.observable.ChangeEvent;
 import org.eclipse.core.databinding.observable.IChangeListener;
+import org.eclipse.core.databinding.observable.IObservable;
 import org.eclipse.core.databinding.property.value.IValueProperty;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
@@ -857,7 +857,7 @@ public abstract class AUiSnippetGenericPropertyInstances extends AUiCategorySect
 		caHelper = new CategoryAssignmentHelper(caModel);
 	}
 
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@Override
 	public void setDataBinding(DataBindingContext dbCtx, EditingDomain editingDomain, EObject model) {
 		initializeHelperForModel(model);
@@ -990,10 +990,8 @@ public abstract class AUiSnippetGenericPropertyInstances extends AUiCategorySect
 		
 		// Add binding change listeners to every binding, so it can update the decorators
 		// accordingly in case they are added to the bound SWT widget
-		dbCtx.getValidationStatusProviders().forEach(new Consumer<Binding>() {
-			public void accept(Binding binding) {
-				binding.getValidationStatus().addChangeListener(new BindingChangeListener(binding));
-			};
+		dbCtx.getValidationStatusProviders().forEach(binding -> {
+			binding.getValidationStatus().addChangeListener(new BindingChangeListener(binding));
 		});
 	}
 	
@@ -1009,41 +1007,47 @@ public abstract class AUiSnippetGenericPropertyInstances extends AUiCategorySect
 	 */
 	private class BindingChangeListener implements IChangeListener {
 		
-		private Binding binding;
+		private ValidationStatusProvider binding;
 		
 		/**
 		 * Constructor with the Binding context of the SWT and EMF object
 		 * @param binding The binding from the Binding Context
 		 */
-		private BindingChangeListener(Binding binding) {
+		private BindingChangeListener(ValidationStatusProvider binding) {
 			this.binding = binding;
 		}
 
 		@Override
 		public void handleChange(ChangeEvent event) {
 			IStatus status = (IStatus) binding.getValidationStatus().getValue();
-			Control control = null;
-			if (binding.getTarget() instanceof ISWTObservable) {
-				ISWTObservable swtObservable = (ISWTObservable) binding.getTarget();
-				control = (Control) swtObservable.getWidget();
-			}
-			ControlDecoration decoration = mapControlToDecoration.get(control);
-			if (decoration != null) {
-				if (status.isOK()) {
-					decoration.hide();
-				} else {
-					if (status.getSeverity() == Status.ERROR) {
-						FieldDecoration fieldDecoration = FieldDecorationRegistry.getDefault().getFieldDecoration(FieldDecorationRegistry.DEC_ERROR);
-						decoration.setImage(fieldDecoration.getImage());
-					} else if (status.getSeverity() == Status.WARNING) {
-						FieldDecoration fieldDecoration = FieldDecorationRegistry.getDefault().getFieldDecoration(FieldDecorationRegistry.DEC_WARNING);
-						decoration.setImage(fieldDecoration.getImage());
-					} else if (status.getSeverity() == Status.INFO) {
-						FieldDecoration fieldDecoration = FieldDecorationRegistry.getDefault().getFieldDecoration(FieldDecorationRegistry.DEC_INFORMATION);
-						decoration.setImage(fieldDecoration.getImage());
+			
+			
+			for (IObservable target : binding.getTargets()) {
+				Control control = null;
+				
+				if (target instanceof ISWTObservable) {
+					ISWTObservable swtObservable = (ISWTObservable) target;
+					control = (Control) swtObservable.getWidget();
+				}
+				
+				ControlDecoration decoration = mapControlToDecoration.get(control);
+				if (decoration != null) {
+					if (status.isOK()) {
+						decoration.hide();
+					} else {
+						if (status.getSeverity() == Status.ERROR) {
+							FieldDecoration fieldDecoration = FieldDecorationRegistry.getDefault().getFieldDecoration(FieldDecorationRegistry.DEC_ERROR);
+							decoration.setImage(fieldDecoration.getImage());
+						} else if (status.getSeverity() == Status.WARNING) {
+							FieldDecoration fieldDecoration = FieldDecorationRegistry.getDefault().getFieldDecoration(FieldDecorationRegistry.DEC_WARNING);
+							decoration.setImage(fieldDecoration.getImage());
+						} else if (status.getSeverity() == Status.INFO) {
+							FieldDecoration fieldDecoration = FieldDecorationRegistry.getDefault().getFieldDecoration(FieldDecorationRegistry.DEC_INFORMATION);
+							decoration.setImage(fieldDecoration.getImage());
+						}
+						decoration.setDescriptionText(status.getMessage());
+						decoration.show();
 					}
-					decoration.setDescriptionText(status.getMessage());
-					decoration.show();
 				}
 			}
 		}

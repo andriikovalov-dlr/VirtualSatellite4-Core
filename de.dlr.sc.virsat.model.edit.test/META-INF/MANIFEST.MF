@@ -9,7 +9,29 @@ Fragment-Host: de.dlr.sc.virsat.model.edit
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
-Export-Package: de.dlr.sc.virsat.model.edit.test
+Export-Package: de.dlr.sc.virsat.model.concept.calculation,
+ de.dlr.sc.virsat.model.concept.migrator,
+ de.dlr.sc.virsat.model.concept.types.category,
+ de.dlr.sc.virsat.model.concept.types.property,
+ de.dlr.sc.virsat.model.concept.types.structural,
+ de.dlr.sc.virsat.model.dvlm.categories.propertydefinitions.provider,
+ de.dlr.sc.virsat.model.dvlm.categories.propertyinstances.provider,
+ de.dlr.sc.virsat.model.dvlm.categories.propertyinstances.util,
+ de.dlr.sc.virsat.model.dvlm.categories.provider,
+ de.dlr.sc.virsat.model.dvlm.command,
+ de.dlr.sc.virsat.model.dvlm.concepts.registry,
+ de.dlr.sc.virsat.model.dvlm.provider,
+ de.dlr.sc.virsat.model.dvlm.qudv.provider,
+ de.dlr.sc.virsat.model.dvlm.qudv.util,
+ de.dlr.sc.virsat.model.dvlm.resource.command,
+ de.dlr.sc.virsat.model.dvlm.resource.provider,
+ de.dlr.sc.virsat.model.dvlm.roles,
+ de.dlr.sc.virsat.model.dvlm.structural.command,
+ de.dlr.sc.virsat.model.dvlm.structural.provider,
+ de.dlr.sc.virsat.model.dvlm.transactional.util,
+ de.dlr.sc.virsat.model.dvlm.util,
+ de.dlr.sc.virsat.model.dvlm.util.command,
+ de.dlr.sc.virsat.model.edit.test
 Require-Bundle: org.junit,
  org.eclipse.emf.edit,
  org.eclipse.emf.ecore.xmi,

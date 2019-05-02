@@ -13,6 +13,7 @@ Require-Bundle: de.dlr.sc.virsat.external.lib,
  org.eclipse.core.runtime,
  org.eclipse.jface,
  org.eclipse.draw2d
-Export-Package: org.eclipse.nebula.widgets.treemapper,
+Export-Package: de.dlr.sc.virsat.external.lib.nebula.incubation,
+ org.eclipse.nebula.widgets.treemapper,
  org.eclipse.nebula.widgets.treemapper.internal
 Automatic-Module-Name: de.dlr.sc.virsat.external.lib.nebula.incubation

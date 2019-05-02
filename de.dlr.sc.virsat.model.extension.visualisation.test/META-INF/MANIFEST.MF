@@ -16,5 +16,10 @@ Require-Bundle: org.junit,
  de.dlr.sc.virsat.concept.unittest.util,
  de.dlr.sc.virsat.model.extension.ps,
  de.dlr.sc.virsat.model.extension.tests
-Export-Package: de.dlr.sc.virsat.model.extension.visualisation.test
+Export-Package: de.dlr.sc.virsat.model.extension.visualisation,
+ de.dlr.sc.virsat.model.extension.visualisation.comparison,
+ de.dlr.sc.virsat.model.extension.visualisation.delta,
+ de.dlr.sc.virsat.model.extension.visualisation.migrator,
+ de.dlr.sc.virsat.model.extension.visualisation.model,
+ de.dlr.sc.virsat.model.extension.visualisation.test
 Automatic-Module-Name: de.dlr.sc.virsat.model.extension.visualisation.test

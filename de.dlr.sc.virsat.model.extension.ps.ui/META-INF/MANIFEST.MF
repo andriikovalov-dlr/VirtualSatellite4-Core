@@ -18,4 +18,9 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: DLR (German Aerospace Center)
 Automatic-Module-Name: de.dlr.sc.virsat.model.extension.ps.ui
+Export-Package: de.dlr.sc.virsat.model.extension.ps.propertyTester,
+ de.dlr.sc.virsat.model.extension.ps.ui.command,
+ de.dlr.sc.virsat.model.extension.ps.ui.handler,
+ de.dlr.sc.virsat.model.extension.ps.ui.snippet,
+ de.dlr.sc.virsat.model.extension.ps.ui.wizardsde.dlr.sc.virsat.model.extension.ps.propertyTester
 

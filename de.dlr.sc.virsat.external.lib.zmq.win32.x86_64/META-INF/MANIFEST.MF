@@ -14,7 +14,8 @@ Eclipse-PlatformFilter: (&  (osgi.os=win32) (osgi.arch=x86_64) )
 Bundle-ClassPath: .,
  native_lib/zmq/zmq.jar
 Require-Bundle: de.dlr.sc.virsat.external.lib
-Export-Package: org.zeromq
+Export-Package: de.dlr.sc.virsat.external.lib.zmq.win32.x86_64,
+ org.zeromq
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: de.dlr.sc.virsat.external.lib.zmq.win32.x86_64.Activator
 Automatic-Module-Name: de.dlr.sc.virsat.external.lib.zmq.win32.x86_64
