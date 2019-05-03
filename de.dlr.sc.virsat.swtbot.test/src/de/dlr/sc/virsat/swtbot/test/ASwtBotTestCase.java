@@ -317,7 +317,9 @@ public class ASwtBotTestCase {
 		bot.saveAllEditors();
 		waitForEditingDomainAndUiThread();
 		bot.waitUntil(Conditions.waitForJobs(ResourcesPlugin.FAMILY_AUTO_BUILD, "eclipse auto builders (inheritance builder)"));
+		waitForEditingDomainAndUiThread();
 	}
+	
 	/**
 	 * waits for calculation builder 
 	 *
@@ -326,6 +328,7 @@ public class ASwtBotTestCase {
 		bot.saveAllEditors();
 		waitForEditingDomainAndUiThread();
 		bot.waitUntil(Conditions.waitForJobs(ResourcesPlugin.FAMILY_AUTO_BUILD, "eclipse auto builders (calculation builder)"));
+		waitForEditingDomainAndUiThread();
 	}
 	
 	/**
