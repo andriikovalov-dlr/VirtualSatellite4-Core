@@ -344,6 +344,7 @@ class ResourceAccessBuilder extends IncrementalProjectBuilder {
 			name = name.replaceAll("id", "");
 			return name;
 		}
+		
 		def concatenateTable(Node node) {
 			var name = node.attributeList.get(0).toString();
 			name = name.replace("\"", "");
@@ -352,7 +353,6 @@ class ResourceAccessBuilder extends IncrementalProjectBuilder {
 			val lastpart = tokens.last;
 			val beforeLastPart = tokens.get(tokens.length - 2);
 			return node.nodeName + beforeLastPart.toFirstUpper + lastpart.toFirstUpper;
-
 		}
 
 		def getExtensionPointID(Node node, String s) {
