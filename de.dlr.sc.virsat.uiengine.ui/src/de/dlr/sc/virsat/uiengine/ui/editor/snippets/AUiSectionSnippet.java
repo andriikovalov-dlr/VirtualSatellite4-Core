@@ -177,9 +177,10 @@ public abstract class AUiSectionSnippet implements IUiSnippet {
 	@Override
 	public void saveExpansionState(IFile stateStorage) {
 		QualifiedName key = getSectionExpansionStateKey();
+		
 		try {
 			if (key != null) {
-				stateStorage.setPersistentProperty(key, new Boolean(isExpanded()).toString());
+				stateStorage.setPersistentProperty(key, String.valueOf(isExpanded()));
 			}
 		} catch (CoreException e) {
 			Activator.getDefault().getLog().log(new Status(Status.WARNING, Activator.getPluginId(), "Could not save the expansion state"));
