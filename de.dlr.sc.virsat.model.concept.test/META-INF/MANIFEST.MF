@@ -17,7 +17,7 @@ Require-Bundle: org.eclipse.core.runtime,
  de.dlr.sc.virsat.project,
  de.dlr.sc.virsat.external.lib.apache.poi
 Import-Package: de.dlr.sc.virsat.project.test
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: de.dlr.sc.virsat.model.concept,
  de.dlr.sc.virsat.model.concept.builder.resources,
  de.dlr.sc.virsat.model.concept.generator,

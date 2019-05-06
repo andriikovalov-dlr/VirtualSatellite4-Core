@@ -7,7 +7,7 @@ Bundle-Activator: de.dlr.sc.virsat.commons.Activator
 Bundle-Vendor: DLR (German Aerospace Center)
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Bundle-ActivationPolicy: lazy
 Eclipse-ExtensibleAPI: true
 Export-Package: de.dlr.sc.virsat.commons,
