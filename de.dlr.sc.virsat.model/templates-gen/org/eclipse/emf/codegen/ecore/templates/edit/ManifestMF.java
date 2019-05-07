@@ -27,16 +27,17 @@ public class ManifestMF
   protected final String TEXT_10 = NL + "Bundle-RequiredExecutionEnvironment: JavaSE-1.6";
   protected final String TEXT_11 = NL + "Bundle-RequiredExecutionEnvironment: JavaSE-1.7";
   protected final String TEXT_12 = NL + "Bundle-RequiredExecutionEnvironment: JavaSE-1.8";
-  protected final String TEXT_13 = NL + "Export-Package: ";
-  protected final String TEXT_14 = ",";
-  protected final String TEXT_15 = NL + " ";
-  protected final String TEXT_16 = NL + "Require-Bundle: ";
-  protected final String TEXT_17 = ";resolution:=optional;x-installation:=greedy";
-  protected final String TEXT_18 = ";visibility:=reexport";
-  protected final String TEXT_19 = NL + "Import-Package: org.osgi.framework";
-  protected final String TEXT_20 = NL + "Eclipse-LazyStart: true";
-  protected final String TEXT_21 = NL + "Bundle-ActivationPolicy: lazy";
-  protected final String TEXT_22 = NL;
+  protected final String TEXT_13 = NL + "Bundle-RequiredExecutionEnvironment: JavaSE-11";
+  protected final String TEXT_14 = NL + "Export-Package: ";
+  protected final String TEXT_15 = ",";
+  protected final String TEXT_16 = NL + " ";
+  protected final String TEXT_17 = NL + "Require-Bundle: ";
+  protected final String TEXT_18 = ";resolution:=optional;x-installation:=greedy";
+  protected final String TEXT_19 = ";visibility:=reexport";
+  protected final String TEXT_20 = NL + "Import-Package: org.osgi.framework";
+  protected final String TEXT_21 = NL + "Eclipse-LazyStart: true";
+  protected final String TEXT_22 = NL + "Bundle-ActivationPolicy: lazy";
+  protected final String TEXT_23 = NL;
 
   public String generate(Object argument)
   {
@@ -80,41 +81,43 @@ public class ManifestMF
     stringBuffer.append(TEXT_11);
     } else if (genModel.getComplianceLevel() == GenJDKLevel.JDK80_LITERAL) {
     stringBuffer.append(TEXT_12);
+    } else if (genModel.getComplianceLevel() == GenJDKLevel.JDK110_LITERAL) {
+    stringBuffer.append(TEXT_13);
     }
     Iterator<String> packagesIterator = genModel.getEditQualifiedPackageNames().iterator(); if (packagesIterator.hasNext()) { String pack = packagesIterator.next();
-    stringBuffer.append(TEXT_13);
+    stringBuffer.append(TEXT_14);
     stringBuffer.append(pack);
     while(packagesIterator.hasNext()) { pack = packagesIterator.next();
-    stringBuffer.append(TEXT_14);
     stringBuffer.append(TEXT_15);
+    stringBuffer.append(TEXT_16);
     stringBuffer.append(pack);
     }
     }
     Iterator<String> requiredPluginIterator = genModel.getEditRequiredPlugins().iterator(); if (requiredPluginIterator.hasNext()) { String pluginID = requiredPluginIterator.next();
+    stringBuffer.append(TEXT_17);
+    stringBuffer.append(pluginID);
+    if (pluginID.startsWith("org.eclipse.core.runtime")) {if (genModel.isOSGiCompatible()) {
+    stringBuffer.append(TEXT_18);
+    }} else {
+    stringBuffer.append(TEXT_19);
+    } while(requiredPluginIterator.hasNext()) { pluginID = requiredPluginIterator.next();
+    stringBuffer.append(TEXT_15);
     stringBuffer.append(TEXT_16);
     stringBuffer.append(pluginID);
     if (pluginID.startsWith("org.eclipse.core.runtime")) {if (genModel.isOSGiCompatible()) {
-    stringBuffer.append(TEXT_17);
-    }} else {
     stringBuffer.append(TEXT_18);
-    } while(requiredPluginIterator.hasNext()) { pluginID = requiredPluginIterator.next();
-    stringBuffer.append(TEXT_14);
-    stringBuffer.append(TEXT_15);
-    stringBuffer.append(pluginID);
-    if (pluginID.startsWith("org.eclipse.core.runtime")) {if (genModel.isOSGiCompatible()) {
-    stringBuffer.append(TEXT_17);
     }} else if (!pluginID.equals("org.eclipse.xtext.xbase.lib") && !pluginID.equals("org.eclipse.emf.ecore.xcore.lib")) {
-    stringBuffer.append(TEXT_18);
+    stringBuffer.append(TEXT_19);
     }}
     }
     if (genModel.isOSGiCompatible()) {
-    stringBuffer.append(TEXT_19);
-    }
-    if (genModel.getRuntimeVersion() == GenRuntimeVersion.EMF22 || genModel.getRuntimeVersion() == GenRuntimeVersion.EMF23) {
     stringBuffer.append(TEXT_20);
     }
+    if (genModel.getRuntimeVersion() == GenRuntimeVersion.EMF22 || genModel.getRuntimeVersion() == GenRuntimeVersion.EMF23) {
     stringBuffer.append(TEXT_21);
+    }
     stringBuffer.append(TEXT_22);
+    stringBuffer.append(TEXT_23);
     return stringBuffer.toString();
   }
 }
