@@ -50,7 +50,7 @@
 										<additionalArguments>
 											<additionalArgument>
 												-link
-												https://docs.oracle.com/en/java/javase/11/docs/api/index.html
+												https://docs.oracle.com/en/java/javase/11/docs/api/
 											</additionalArgument>
 											<additionalArgument>
 												-linkoffline
@@ -58,7 +58,6 @@
 												http://help.eclipse.org/mars/topic/org.eclipse.platform.doc.isv/reference/api/
 											</additionalArgument>
 											<additionalArgument>-public</additionalArgument>
-											<additionalArgument>-verbose</additionalArgument>
 										</additionalArguments>
 									</javadocOptions>
 								</configuration>
