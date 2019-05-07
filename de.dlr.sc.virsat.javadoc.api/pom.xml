@@ -44,6 +44,7 @@
 										<mainLabel>VirSat Core API JavaDoc Compilation</mainLabel>
 									</tocOptions>
 									<javadocOptions>
+										<ignoreError>true</ignoreError>
 										<includes>
 											<include>de.dlr.sc.virsat.*</include>
 										</includes>
@@ -58,6 +59,7 @@
 												http://help.eclipse.org/mars/topic/org.eclipse.platform.doc.isv/reference/api/
 											</additionalArgument>
 											<additionalArgument>-public</additionalArgument>
+											<additionalArgument>-verbose</additionalArgument>
 										</additionalArguments>
 									</javadocOptions>
 								</configuration>
