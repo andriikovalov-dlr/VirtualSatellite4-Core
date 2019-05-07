@@ -44,6 +44,7 @@
 										<mainLabel>VirSat Core API JavaDoc Compilation</mainLabel>
 									</tocOptions>
 									<javadocOptions>
+										<ignoreError>true</ignoreError>
 										<additionalArguments>
 											<additionalArgument>${javadoc-args}</additionalArgument>
 											<additionalArgument>
