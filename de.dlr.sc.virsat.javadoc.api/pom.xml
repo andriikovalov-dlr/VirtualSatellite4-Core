@@ -38,6 +38,14 @@
 									<goal>javadoc</goal>
 								</goals>
 								<configuration>
+									<!-- 	1.4.0 tycho-document-bundle-plugin is not compatible with javadoc
+											and needs to be turned off! This is because the plugin expects a file
+											called package-list in order to create the toc.
+											However, in Java 11 javadoc has changed to produce a file called
+											element-list instead!
+											Until the plugin has been fixed the generation has to stay turned off!		 
+									-->
+									<skipTocGen>true</skipTocGen>
 									<outputDirectory>${project.basedir}/help/api-docs/javadoc</outputDirectory>
 									<tocFile>${project.basedir}/help/api_docs.xml</tocFile>
 									<tocOptions>
@@ -58,6 +66,7 @@
 												http://help.eclipse.org/mars/topic/org.eclipse.platform.doc.isv/reference/api/
 											</additionalArgument>
 											<additionalArgument>-public</additionalArgument>
+											<additionalArgument>-verbose</additionalArgument>
 										</additionalArguments>
 									</javadocOptions>
 								</configuration>
